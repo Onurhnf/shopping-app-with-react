@@ -1,0 +1,12 @@
+.lists {
+  display: flex;
+  flex-direction: column;
+}
+
+/* mobile first*/
+@media (min-width: 768px) {
+  .lists {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
