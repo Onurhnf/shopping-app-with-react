@@ -3,14 +3,10 @@ import CalcItems from "./CalcItems";
 import classes from "./ShopList.module.css";
 import Container from "../UI/Container";
 
-const ShopList = (props) => {
-  // const items = props.items.map((item) => {
-  //     return <ListItems key={item.id} item={item} />;
-  // });
-
-  //----
-  const DUMMY_DATA = {
-    item1: {
+const ShopList = () => {
+  //----firebase fetching skipped.
+  const DUMMY_DATA = [
+    {
       id: "1",
       title: "Test Item",
       description: "description",
@@ -18,7 +14,7 @@ const ShopList = (props) => {
       price: 1_000,
       km: "2km",
     },
-    item2: {
+    {
       id: "2",
       title: "Test Item2",
       description: "description2",
@@ -26,14 +22,15 @@ const ShopList = (props) => {
       price: 2_000,
       km: "3km",
     },
-  };
+  ];
 
   return (
     <Container>
       <h2>List</h2>
       <div className={classes.lists}>
-        <ListItems item={DUMMY_DATA.item1} />
-        <ListItems item={DUMMY_DATA.item2} />
+        {DUMMY_DATA.map((item) => (
+          <ListItems key={item.id} item={item} />
+        ))}
       </div>
       <CalcItems />
     </Container>
