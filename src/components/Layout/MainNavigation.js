@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+//css
 import classes from "./MainNavigation.module.css";
+
 const MainNavigation = () => {
-  //hooks
   const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
 
   return (

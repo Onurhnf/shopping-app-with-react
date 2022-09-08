@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-//redux imports
 import { useDispatch, useSelector } from "react-redux";
+//actions
 import { login } from "../../Store/UserSlice";
 //css
 import classes from "./AuthForm.module.css";
@@ -55,12 +55,11 @@ const AuthForm = () => {
           "Content-Type": "application/json",
         },
       });
-      setIsLoading(false); //loading spinner/text ends here
+      setIsLoading(false); //loading spinner/text ends here after fetching
 
       const data = await response.json();
       if (!response.ok) {
-        // if response is not ok
-        //error
+        // if response is not ok then throw an error
         throw new Error(data.error.message);
       } else {
         //success response,
@@ -81,7 +80,7 @@ const AuthForm = () => {
         }
       }
     } catch (error) {
-      //error handling
+      //error handling, catching thrown error
       alert(error.message);
     }
   };
@@ -101,7 +100,6 @@ const AuthForm = () => {
           />
           <span className={classes.floatinglabel}>Email</span>
         </div>
-
         <div className={classes.userinput}>
           <br />
           <input
@@ -113,7 +111,6 @@ const AuthForm = () => {
           />
           <span className={classes.floatinglabel}>Password</span>
         </div>
-
         <div className={classes.actions}>
           {!isLoading && <button>{isLogin ? "Sign In" : "Sign Up"}</button>}
           {isLoading && <p>Sending request...</p>}

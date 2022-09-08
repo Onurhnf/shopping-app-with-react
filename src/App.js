@@ -6,7 +6,7 @@ import React from "react";
 import Spinner from "./components/UI/Spinner";
 import Layout from "./components/Layout/Layout";
 import HomePage from "./RoutePages/pages/HomePage";
-
+//---> Lazy loading
 const AuthPage = React.lazy(() => import("./RoutePages/pages/AuthPage"));
 const ProfilePage = React.lazy(() => import("./RoutePages/pages/ProfilePage"));
 const ListPage = React.lazy(() => import("./RoutePages/pages/ListPage"));
@@ -20,8 +20,6 @@ function App() {
     if (firstRun) {
       firstRun = false;
       return;
-    } else {
-      //console.log(user);
     }
   }, [user]);
 

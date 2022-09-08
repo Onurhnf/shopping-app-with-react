@@ -8,12 +8,10 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import { addToCart, removeFromCart } from "../../Store/ListSlice";
 //css
 import classes from "./ListItems.module.css";
-//components
 let datas = [];
 
 const ListItems = (props) => {
   const { title, description, stars, km, price } = props.item;
-  //hooks
   const dispatch = useDispatch();
   const [isAdded, setIsAdded] = useState(false);
   //--- email for protecting data from other users
