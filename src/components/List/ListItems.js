@@ -4,22 +4,18 @@ import { useSelector } from "react-redux";
 //lazy loading image
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
-//actions
 import { addToCart, removeFromCart } from "../../Store/ListSlice";
-//css
 import classes from "./ListItems.module.css";
+
 let datas = [];
 
 const ListItems = (props) => {
   const { title, description, stars, km, price } = props.item;
-
   const dispatch = useDispatch();
   const [isAdded, setIsAdded] = useState(false);
-  //--- email for protecting data from other users
-  const email = useSelector((state) => state.user.user.user.email);
+  const email = useSelector((state) => state.user.user.user.email); //--- email for protecting data from other users
 
   // adding to cart
-
   const addCartHandler = () => {
     dispatch(addToCart(props.item));
     setIsAdded(true);
