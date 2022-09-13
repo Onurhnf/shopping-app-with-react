@@ -6,6 +6,9 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import { addToCart, removeFromCart } from "../../Store/ListSlice";
 import classes from "./ListItems.module.css";
+//icons
+import StarIcon from "./icons/StarIcon";
+import LocIcon from "./icons/LocIcon";
 
 let datas = [];
 
@@ -76,12 +79,18 @@ const ListItems = (props) => {
 
         <div className={classes["list-imageless"]}>
           <h3>{title}</h3>
-          <span>{description}</span>
-          <div>
-            <span className={classes["list-stars"]}>{stars}</span>
-            <span className={classes["list-km"]}>{km}</span>
+          <span className={classes.description}>{description}</span>
+          <div className={classes["list-info"]}>
+            <span className={classes["list-stars"]}>
+              <StarIcon />
+              {" " + stars}
+            </span>
+            <span className={classes["list-km"]}>
+              <LocIcon />
+              {" " + km}
+            </span>
           </div>
-          <span className={classes["list-price"]}>{price}</span>
+          <span className={classes["list-price"]}>Fiyat: {price} TL</span>
         </div>
 
         <button onClick={addCartHandler}>

@@ -8,19 +8,19 @@ const ShopList = () => {
   const DUMMY_DATA = [
     {
       id: "1",
-      title: "Test Item",
-      description: "description",
+      title: "Villa Item",
+      description: "Amazing description",
       stars: 4,
       price: 1_000,
-      km: "2km",
+      km: "2.1 km",
     },
     {
       id: "2",
-      title: "Test Item2",
-      description: "description2",
+      title: "Villa Item2",
+      description: "Amazing description2",
       stars: 2,
       price: 2_000,
-      km: "3km",
+      km: "3.7 km",
     },
   ];
 

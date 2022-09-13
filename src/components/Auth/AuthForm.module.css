@@ -29,6 +29,10 @@
   border-color: #bb3a3a;
   color: white;
 }
+
+.actions button:active {
+  background-color: #b94b4b;
+}
 @media (min-width: 768px) {
   .auth {
     width: 30rem;

@@ -1,14 +1,14 @@
 .head {
   overflow: hidden;
-  background-color: rgb(243, 242, 242);
+  background-color: rgb(238, 237, 237);
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 5rem;
   display: flex;
-  color: #f2f2f2;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 0 20px 0px rgba(0, 0, 0, 0.05);
 }
 .head div {
   width: 100%;
@@ -19,6 +19,30 @@
 .context {
   display: flex;
   max-width: 600px;
+}
+.context button {
+  padding: 15px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 100px;
+  font-weight: bold;
+  border: 1px solid rgb(185, 185, 185);
+  background-color: rgb(228, 228, 228);
+}
+.context button a {
+  text-decoration: none;
+  color: #000;
+}
+.context button:hover {
+  background-color: #bb3a3a;
+  border-color: #bb3a3a;
+  color: white;
+}
+.context button:active {
+  background-color: #b94b4b;
+}
+.context a {
+  stroke: #b94b4b;
 }
 
 @media (min-width: 900px) {

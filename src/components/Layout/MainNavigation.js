@@ -11,7 +11,9 @@ const MainNavigation = () => {
       <div className={classes.context}>
         {!isLoggedIn && ( //if user is not logged in show this button
           <div>
-            <Link to="/auth">Sign in/up</Link>
+            <Link to="/auth">
+              <button>Sign in/up</button>
+            </Link>
           </div>
         )}
         {isLoggedIn && ( //if user is logged in then show list button
