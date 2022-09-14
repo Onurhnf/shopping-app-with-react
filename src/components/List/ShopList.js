@@ -38,6 +38,14 @@ const ShopList = () => {
       price: 2_000,
       km: "3.7 km",
     },
+    {
+      id: "5",
+      title: "Villa Item2",
+      description: "Amazing description2",
+      stars: 3,
+      price: 4_000,
+      km: "4.4 km",
+    },
   ];
 
   return (

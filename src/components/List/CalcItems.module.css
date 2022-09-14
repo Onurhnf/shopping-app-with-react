@@ -18,6 +18,7 @@
   background-color: #fff;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  margin-top: 15px;
 }
 .calc-in {
   max-width: 250px;

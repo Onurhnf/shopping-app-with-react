@@ -14,7 +14,6 @@
   justify-content: flex-start;
   padding: 15px;
   padding-bottom: 40px;
-  margin-top: -20px;
   position: relative;
   border-bottom: 1px solid rgb(235, 235, 235);
   gap: 10px;
@@ -98,6 +97,8 @@
   }
   .list {
     width: 0;
+    min-width: 370px;
+    padding: 0;
   }
 }
 @media (min-width: 992px) {
