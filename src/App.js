@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { useEffect, Suspense } from "react";
+import { Suspense } from "react";
+// import {useEffect} from 'react';
 import React from "react";
 ///Components
 import Spinner from "./components/UI/Spinner";
@@ -12,16 +13,16 @@ const ProfilePage = React.lazy(() => import("./RoutePages/pages/ProfilePage"));
 const ListPage = React.lazy(() => import("./RoutePages/pages/ListPage"));
 const NotFound = React.lazy(() => import("./RoutePages/pages/NotFound"));
 
-let firstRun = true;
+// let firstRun = true;
 function App() {
   const user = useSelector((state) => state.user);
 
-  useEffect(() => {
-    if (firstRun) {
-      firstRun = false;
-      return;
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (firstRun) {
+  //     firstRun = false;
+  //     return;
+  //   }
+  // }, [user]);
 
   return (
     <Layout>
